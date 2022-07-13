@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Carrito de compras</title>
+  </head>
+  <body>
+    <div class="menu">
+      <p>
+        <i>
+          <h2>Hola <%= name %></h2>
+          <img src="/avatars/<%= avatar %>" alt="avatar" />
+        </i>
+        <a href="/user/prods">Ver productos</a>
+        <a href="/user/cart/<%= cartId %>">Ver carrito</a>
+        <a href="/user/cart/delcart/<%= cartId %>">Vaciar carrito</a>
+        <a href="/user/cart/order/<%= cartId %>">Finalizar compra</a>
+        <a href="/logout">Cerrar sesión</a>
+      </p>
+    </div>
+    <h1 style="text-align: center">Carrito de compras</h1>
+    <% if (products.length) { %>
+    <table class="prodTable">
+      <thead>
+        <td>Nombre</td>
+        <td>Descripción</td>
+        <td>Precio</td>
+        <td>Imagen</td>
+        <td>Cantidad</td>
+        <td>Total</td>
+      </thead>
+      <% products.forEach((prod)=>{ %>
+      <tr>
+        <td><%= prod.name %></td>
+        <td><%= prod.description %></td>
+        <td><%= prod.price %></td>
+        <td><img src="<%= prod.imgURL %>" alt="Product image" /></td>
+        <td><%= prod.quantity %></td>
+        <td><%= prod.price * prod.quantity %></td>
+      </tr>
+      <% }) %>
+    </table>
+    <% } else {%>
+    <h3 style="text-align: center">El carrito se encuentra vacío</h3>
+    <% } %>
+  </body>
+</html>

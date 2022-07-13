@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Catálogo de productos</title>
+    <script>
+      function clickAddProduct(e, id) {
+        const q = document.getElementById(id).value;
+        if (q >= 0 && q != '') {
+          e.href += '/' + document.getElementById(id).value;
+        } else {
+          event.preventDefault();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="menu">
+      <p>
+        <i>
+          <h2>Hola <%= name %></h2>
+          <img src="/avatars/<%= avatar %>" alt="avatar" />
+        </i>
+        <a href="/user/prods">Ver productos</a>
+        <a href="/user/cart/<%= cartId %>">Ver carrito</a>
+        <a href="/logout">Cerrar sesión</a>
+      </p>
+    </div>
+    <h1 style="text-align: center">Catálogo de productos</h1>
+    <% if (products) { %>
+    <table class="prodTable">
+      <thead>
+        <td>Nombre</td>
+        <td>Descripción</td>
+        <td>Precio</td>
+        <td>Stock</td>
+        <td>Imagen</td>
+        <td>Cantidad</td>
+        <td></td>
+      </thead>
+      <% products.forEach((prod)=>{ %>
+      <tr>
+        <td><%= prod.name %></td>
+        <td><%= prod.description %></td>
+        <td><%= prod.price %></td>
+        <td><%= prod.stock %></td>
+        <td><img src="<%= prod.imgURL %>" alt="Product image" /></td>
+        <td>
+          <input
+            type="number"
+            name="qty"
+            max="<%= prod.stock %>"
+            min="0"
+            id="<%= prod._id %>"
+          />
+        </td>
+        <td>
+          <a
+            href="/user/cart/<%= cartId %>/<%= prod._id %>"
+            onclick="clickAddProduct(this,'<%= prod._id %>')"
+          >
+            Agregar
+          </a>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+    <% } %>
+  </body>
+</html>

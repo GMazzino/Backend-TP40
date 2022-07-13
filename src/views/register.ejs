@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Registrar</title>
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <br />
+    <p>
+      Ingrese la información solicitada a continuación para crear su nuevo
+      usuario
+    </p>
+    <br /><br /><br />
+    <div class="form">
+      <form
+        action="/register"
+        method="post"
+        autocomplete="off"
+        enctype="multipart/form-data"
+      >
+        <label for="email">E-mail</label>
+        <input type="email" name="username" required maxlength="50" />
+        <br />
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" required />
+        <br />
+        <label for="name">Nombre completo</label>
+        <input type="text" name="name" required maxlength="50" />
+        <br />
+        <label for="age">Edad</label>
+        <input type="number" name="age" max="120" />
+        <br />
+        <label for="address">Domicilio</label>
+        <input type="text" name="address" maxlength="50" />
+        <br />
+        <label for="phone">Celular</label>
+        <input type="tel" name="phone" id="phone" />
+        <br />
+        <label for="avatar">Imagen usuario</label>
+        <input type="file" name="avatar" />
+        <br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <p>Si ya tiene una cuenta, <a href="/login">ingrese</a></p>
+  </body>
+</html>

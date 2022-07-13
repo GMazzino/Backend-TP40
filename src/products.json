@@ -1,0 +1,48 @@
+{
+  "code":"ART00001",
+  "name": "Telescopio",
+  "description": "Telescopio perfecto para estudiantes",
+  "price": 4820.58,
+  "stock": 8,
+  "imgURL": "https://img.icons8.com/external-filled-outline-satawat-anukul/64/000000/external-telescope-education-filled-outline-filled-outline-satawat-anukul-2.png"
+},
+{
+  "code":"ART00002",
+  "name": "Set de escuadras",
+  "description": "Conjunto de variadas escuadras",
+  "price": 634.72,
+  "stock":14,
+  "imgURL": "https://img.icons8.com/external-flat-icons-pause-08/64/000000/external-angle-education-flat-icons-pause-08.png"
+},
+{
+  "code":"ART00003",
+  "name": "Calculadora",
+  "description": "Calculadora estandar",
+  "price": 734.66,
+  "stock":7,
+  "imgURL": "https://img.icons8.com/external-others-aquariid/64/000000/external-accounting-education-others-aquariid-2.png"
+},
+{
+  "code":"ART00004",
+  "name": "Tijera",
+  "description": "Tijera mediana ideal escolar",
+  "price": 228.7,
+  "stock": 3,
+  "imgURL": "https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/000000/external-scissor-kindergarten-icongeek26-linear-colour-icongeek26.png"
+},
+{
+  "code":"ART00005",
+  "name": "Globo terráqueo",
+  "description": "Globo terráqueo diámetro 40cm",
+  "price": 916.0,
+  "stock": 2,
+  "imgURL": "https://img.icons8.com/external-filled-line-rakhmat-setiawan/64/000000/external-earth-back-to-school-filled-line-filled-line-rakhmat-setiawan.png"
+},
+{
+  "code":"ART00006",
+  "name": "Pizarra",
+  "description":"Pizarra 2.4m x 80cm para marcadores", 
+  "price": 1213.45,
+  "stock":5,
+  "imgURL": "https://img.icons8.com/external-flat-icons-pack-pongsakorn-tan/64/000000/external-blackboard-back-to-school-flat-icons-pack-pongsakorn-tan.png"
+}
